@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1</title>
+</head>
+
+<body>
+    <h1>Домашнее задание второго урока</h1>
+    <script>
+
+        /* Задание 1 */
+
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 Префиксная форма записи,  инкрементирование производится сразу, а возврат — уже с обновленным значением.
+        d = b++; alert(d);           // 1 Постфиксная форма записи, сначала происходит возвращение значения, потом выполняется инкрементирование.
+        c = (2 + ++a); alert(c);      // 5 В переменной хранилась цифра 2, теперь значение увеличивается на 1 сразу, потом прибавляется 2.
+        d = (2 + b++); alert(d);      // 4 В переменной хранилась цифра 1,значение увеличивается на 1, потом прибавляется 2.
+        alert(a);                    // 3 В переменной хранилась цифра 3 после предыдущей операции
+        alert(b);                    // 3 В переменной хранилась цифра 3 после предыдущей операции
+
+        /* Задание 2 */
+
+        var a = 2;
+        var x = 1 + (a *= 2); // 1 + (a = a * 2)
+        console.log(x) // 5
+
+        /* Задание 3 */
+
+        var a = Number(prompt('Введи первое целочисленное любое число, можно отрицательное.'))
+        var b = Number(prompt('Введи второе целочисленное любое число, можно отрицательное.'))
+
+        if ((a >= 0) && (b >= 0)) {
+            console.log(a - b)
+        } else if ((a < 0) && (b < 0)) {
+            console.log(a * b)
+        } else {
+            console.log(a + b)
+        }
+
+        /* Задание 4 */
+
+        var numberUp = Number(prompt('Введи любое число от 0 до 15'))
+
+        switch (numberUp) {
+            case 0:
+                console.log(numberUp++)
+            case 1:
+                console.log(numberUp++)
+            case 2:
+                console.log(numberUp++)
+            case 3:
+                console.log(numberUp++)
+            case 4:
+                console.log(numberUp++)
+            case 5:
+                console.log(numberUp++)
+            case 6:
+                console.log(numberUp++)
+            case 7:
+                console.log(numberUp++)
+            case 8:
+                console.log(numberUp++)
+            case 9:
+                console.log(numberUp++)
+            case 10:
+                console.log(numberUp++)
+            case 11:
+                console.log(numberUp++)
+            case 12:
+                console.log(numberUp++)
+            case 13:
+                console.log(numberUp++)
+            case 14:
+                console.log(numberUp++)
+            case 15:
+                console.log(numberUp++)
+                break;
+            default:
+                break;
+        }
+
+        /* Задание 5 */
+
+        function sum(a, b) {
+            return a + b; // сложение
+        }
+
+        function differ(a, b) {
+            return a - b; // вычитание
+        }
+
+
+        function multip(a, b) {
+            return a * b; // умножение
+        }
+
+
+        function division(a, b) {
+            return a / b; // деление
+        }
+
+        /* Задание 6 */
+
+        var a = Number(prompt('Введи первое число.'));
+        var b = Number(prompt('Введи второе число.'));
+        var operation = prompt('Введи операцию(+, -, * или /).')
+
+        function mathOperation(arg1, arg2, operation) {
+            a = arg1;
+            b = arg2;
+            sum = '+';
+            differ = '-';
+            multip = '*';
+            division = '/';
+            return operation;
+        }
+        switch (operation) {
+            case operation = '+':
+                console.log(sum(a, b));
+                break;
+            case operation = '-':
+                console.log(differ(a, b));
+                break;
+            case operation = '*':
+                console.log(multip(a, b));
+                break;
+            case operation = '/':
+                console.log(division(a, b));
+                break;
+            default:
+                console.log('Такого знака нет.')
+                break;
+        }
+
+        /* Задание 7 */
+
+        console.log(null > 0);  // false , преобразуют null в число, рассматривая его как 0
+        console.log(null == 0); // false, действует особое правило: эти значения ни к чему не приводятся
+        console.log(null >= 0); // true , преобразуют null в число, рассматривая его как 0
+
+
+        /* Задание 8 */
+
+        var val = Number(prompt('Введи число'));
+        var pow = Number(prompt('Введи степень числа'));
+
+        function power(val, pow) {
+            if (pow == 1) {
+                return val;
+            } else {
+                return val * power(val, pow - 1);
+            }
+        }
+        console.log(power(val, pow))
+
+    </script>
+</body>
+
+</html>
