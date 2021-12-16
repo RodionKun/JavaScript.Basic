@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+</head>
+
+<body>
+    <h1>Домашнее задание третьего урока</h1>
+    <script>
+        /* Задание 1 */
+
+        // C помощью while это тяжело сделать, додумался только до такого, хотя и догадываюсь, что не совсем верно
+
+        var a = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+        var i = 0;
+        while (i < a.length) {
+            console.log(a[i++]);
+        }
+
+        /* Задание 2 */
+
+        var products = [];
+
+        function countBasketPrice(x) {
+            for (i = 0; i < products.length; i++) {
+                products_price = + products[i].price;
+            }
+            return products_price;
+        }
+
+        /* Задание 3 */
+        var i;
+        for (i = 0; i >= 10; i++) { }
+        console.log(i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+        console.log(++i);
+
+        /* Задание 4 */
+
+        var arr = 'x';
+        var end = 0;
+
+        while (end <= 20) {
+            end++;
+            console.log(arr);
+            arr = arr + 'x';
+        }
+
+    </script>
+</body>
+
+</html>
